@@ -16,7 +16,7 @@ const TodoItem = ({todos, setTodos, todo, i}) => {
     const saveTodo = (id) => {
         let newTodos = [...todos.map(todo => {
             if(todo.id === id) {
-                if(editInput.trim() !== '') todo.name = editInput.slice(0, 15)
+                if(editInput.trim() !== '') todo.name = editInput.slice(0, 10)
             }
             return todo
         })]
@@ -28,8 +28,8 @@ const TodoItem = ({todos, setTodos, todo, i}) => {
         <>
             <div> <span>{i + 1}.</span>
                 {isEdit === todo.id
-                    ? <input style={{marginLeft: 3, border: 'none'}} value={`${editInput}`} onChange={(e) => setEditInput(e.target.value) } autoFocus/>
-                    : <span style={{marginLeft: 5}}> {todo.name}</span>
+                    ? <input className='editInput' style={{marginLeft: 3, border: 'none'}} value={`${editInput}`} onChange={(e) => setEditInput(e.target.value) } autoFocus/>
+                    : <span className='todo__name' style={{marginLeft: 5}}> {todo.name}</span>
                 }
             </div>
             <div>

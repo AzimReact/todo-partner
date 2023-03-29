@@ -20,6 +20,11 @@
     justify-content: space-between;
     align-items: center;
     opacity: 0.8;
+    animation: girl 2.5s linear;
+}
+@keyframes girl {
+    from {opacity: 0;}
+    to {opacity: 0.8;}
 }
 
 button, input{
@@ -28,7 +33,6 @@ button, input{
     color: saddlebrown;
     background: wheat;
     text-transform: capitalize;
-
 }
 
 span {
@@ -57,11 +61,18 @@ span {
     }
     .todo {
         border: 2px solid wheat;
-        margin: 15px 0;
-        padding: 15px;
-        width: 280px;
+        width: 300px;
     }
     span {
         font-weight: bold;
     }
+    .editInput{
+        width: 120px;
+        margin-left: 10px !important;
+    }
+    span {
+        font-size: 16px;
+    }
+
+
 }
