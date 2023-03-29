@@ -1,15 +1,21 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './App.css'
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 
 function App() {
+    const [woman, setWoman] = useState(null)
+
+    useEffect(() => {
+        const gender = window.confirm("ARE YOU WOMAN?")
+        setWoman(gender)
+    }, [])
     const [todos, setTodos] = useState([])
 
   return (
-    <div className='app'>
-        <TodoForm todos={todos} setTodos={setTodos}/>
-        <TodoList todos={todos} setTodos={setTodos}/>
+    <div className={`app img__for__${woman ? 'girls' : 'boys'}`}>
+        <TodoForm woman={woman} todos={todos} setTodos={setTodos}/>
+        <TodoList woman={woman} todos={todos} setTodos={setTodos}/>
     </div>
   );
 }

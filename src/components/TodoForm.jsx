@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
-import sound from '../assets/oni-chan.mp3'
-
-const TodoForm = ({todos, setTodos}) => {
+import girlSound from '../assets/oni-chan.mp3'
+import boySound from '../assets/uuh_baby.mp3'
+const TodoForm = ({todos, setTodos, woman}) => {
     const [inputValue, setInputValue] = useState('')
 
     function play() {
-        new Audio(sound).play()
+        if (woman) {
+            new Audio(boySound).play()
+        } else {
+            new Audio(girlSound).play()
+        }
     }
     const addTodo = (e) => {
         e.preventDefault()
