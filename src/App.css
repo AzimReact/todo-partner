@@ -20,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
     opacity: 0.8;
-    animation: girl 2.5s linear;
+    animation: girl 1.5s linear;
 }
 @keyframes girl {
     from {opacity: 0;}
