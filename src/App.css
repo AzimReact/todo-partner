@@ -1,86 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', "Roboto Thin";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Roboto Thin";
 }
 .app {
-    padding: 50px 0 0 100px;
-    width: 100%;
-    height: 100vh;
-
+  padding: 50px 0 0 100px;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .img__for__boys {
-    background: no-repeat url("https://cdn.wallpapersafari.com/26/13/b9Wdk4.jpg") center / cover;
+  background: no-repeat url("https://cdn.wallpapersafari.com/26/13/b9Wdk4.jpg")
+    center / cover;
 }
 .img__for__girls {
-    background: no-repeat url("https://i.pinimg.com/originals/bf/8b/7f/bf8b7fbc2cbbdce2e31d18ae2da63bf4.jpg") center / cover;
+  background: no-repeat
+    url("https://i.pinimg.com/originals/bf/8b/7f/bf8b7fbc2cbbdce2e31d18ae2da63bf4.jpg")
+    center / cover;
 }
 .todo {
-    border: 3px solid wheat;
-    margin: 15px 0;
-    padding: 15px;
-    width: 350px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    opacity: 0.8;
-    animation: girl 1.5s ease-in;
+  border: 3px solid wheat;
+  margin: 15px 0;
+  padding: 15px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.8;
+  animation: girl 1.5s ease-in;
 }
 @keyframes girl {
-    from {opacity: 0;}
-    to {opacity: 0.8;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
 }
 
-button, input{
-    padding: 5px 10px;
-    font-weight: bold;
-    color: saddlebrown;
-    background: wheat;
-    text-transform: capitalize;
+button,
+input {
+  padding: 5px 10px;
+  font-weight: bold;
+  color: saddlebrown;
+  background: wheat;
+  text-transform: capitalize;
 }
 
 span {
-    color: wheat;
-    font-size: 20px;
-    text-transform: capitalize;
+  color: wheat;
+  font-size: 20px;
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 950px) {
-    .app {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 0 0 0 ;
-    }
-    .img__for__boys {
-        background: url("https://i.pinimg.com/550x/dd/70/e6/dd70e6a2349e9e1eb7947eb947d39165.jpg") center / cover;
-    }
-    .img__for__girls {
-        background: url("https://cdnb.artstation.com/p/assets/images/images/043/595/491/large/celestine-lascano-untitled44-20211122142620.jpg?1637713766") top center / cover;
-    }
-    .todo {
-        background-color: gray;
-    }
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 0 0;
+  }
+  .img__for__boys {
+    background: url("https://i.pinimg.com/550x/dd/70/e6/dd70e6a2349e9e1eb7947eb947d39165.jpg")
+      center / cover;
+  }
+  .img__for__girls {
+    background: url("https://cdnb.artstation.com/p/assets/images/images/043/595/491/large/celestine-lascano-untitled44-20211122142620.jpg?1637713766")
+      top center / cover;
+  }
+  .todo {
+    background-color: gray;
+  }
 }
 
 @media screen and (max-width: 650px) {
-    .todo {
-        border: 2px solid wheat;
-        width: 300px;
-    }
-    span {
-        font-weight: bold;
-    }
-    .editInput{
-        width: 120px;
-        margin-left: 10px !important;
-    }
-    span {
-        font-size: 16px;
-    }
-
-
+  .todo {
+    border: 2px solid wheat;
+    width: 300px;
+  }
+  span {
+    font-weight: bold;
+  }
+  .editInput {
+    width: 120px;
+    margin-left: 10px !important;
+  }
+  span {
+    font-size: 16px;
+  }
 }

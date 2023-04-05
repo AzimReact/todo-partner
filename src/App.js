@@ -11,7 +11,7 @@ function App() {
         setWoman(gender)
     }, [])
     const [todos, setTodos] = useState([])
-
+    console.log(todos)
   return (
     <div className={`app img__for__${woman ? 'girls' : 'boys'}`}>
         <TodoForm woman={woman} todos={todos} setTodos={setTodos}/>
